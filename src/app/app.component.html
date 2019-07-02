@@ -1,0 +1,56 @@
+<nz-layout style="height: 100%">
+
+    <!-- 头部 -->
+    <app-header></app-header>
+
+    <!-- 主体+左侧菜单 -->
+    <nz-layout>
+
+        <!-- 左侧菜单 -->
+        <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzWidth]="width" [nzReverseArrow]="isReverseArrow"
+            style="background:#ffffff;">
+            <ul nz-menu [nzTheme]="'light'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+                <li nz-menu-item>
+                    <span><i nz-icon type="home"></i><span class="nav-text">主页</span></span>
+                </li>
+                <li nz-submenu>
+                    <span title><i nz-icon type="team"></i><span class="nav-text">用户组</span></span>
+                    <ul>
+                        <li nz-menu-item>VIP</li>
+                        <li nz-menu-item>普通用户</li>
+                    </ul>
+                </li>
+                <li nz-submenu>
+                    <span title><i nz-icon type="video-camera"></i><span class="nav-text">资源库</span></span>
+                    <ul>
+                        <li nz-menu-item>视频</li>
+                        <li nz-menu-item>图片</li>
+                        <li nz-menu-item>音乐</li>
+                        <li nz-menu-item>游戏</li>
+                    </ul>
+                </li>
+                <li nz-menu-item>
+                    <span><i nz-icon type="file-text"></i><span class="nav-text">随笔</span></span>
+                </li>
+                <li nz-menu-item>
+                    <span><i nz-icon type="setting"></i><span class="nav-text">设置</span></span>
+                </li>
+                <li nz-submenu>
+                    <span title><i nz-icon type="link"></i><span class="nav-text">友情链接</span></span>
+                    <ul>
+                        <a nz-menu-item [href]="'http://www.xiyubaba.com'">曦宇巴巴</a>
+                    </ul>
+                </li>
+            </ul>
+        </nz-sider>
+
+        <!-- 主体 -->
+        <nz-layout class="main">
+            <nz-content>
+                <router-outlet></router-outlet>
+            </nz-content>
+        </nz-layout>
+
+
+    </nz-layout>
+</nz-layout>

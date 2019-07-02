@@ -1,0 +1,14 @@
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+}
+
+a:hover {
+  color: #1890ff;
+}
+
+a {
+  transition: color 0.3s;
+  color: rgba(0, 0, 0, 0.65);
+}

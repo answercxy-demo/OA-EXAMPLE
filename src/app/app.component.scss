@@ -1,0 +1,15 @@
+.main {
+    z-index: 1;
+    padding: 15px;
+    min-width: 280px;
+}
+
+.ant-layout-sider-trigger {
+    background: #00ccff;
+}
+
+.ant-layout-sider-children {
+    height: calc(100% - 48px);
+    margin-bottom: 48px;
+    overflow-y: auto;
+}

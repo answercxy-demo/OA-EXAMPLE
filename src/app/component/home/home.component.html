@@ -1,0 +1,124 @@
+<div class="gutter-example">
+
+    <!-- 快捷方式 -->
+    <div top nz-row [nzGutter]="{ xs: 8, sm: 16, md: 16, lg: 16, xl: 16, xxl: 16 }">
+        <div nz-col class="gutter-row" nzXs="24" nzMd="12" nzXl="6">
+            <div class="gutter-box">
+                <h1>
+                    <nz-spin nzSimple></nz-spin>
+                </h1>
+                用户
+            </div>
+        </div>
+        <div nz-col class="gutter-row" nzXs="24" nzMd="12" nzXl="6">
+            <div class="gutter-box">
+                <h1>
+                    <nz-spin nzSimple></nz-spin>
+                </h1>
+                评论
+            </div>
+        </div>
+        <div nz-col class="gutter-row" nzXs="24" nzMd="12" nzXl="6">
+            <div class="gutter-box">
+                <h1>
+                    <nz-spin nzSimple></nz-spin>
+                </h1>
+                随笔
+            </div>
+        </div>
+        <div nz-col class="gutter-row" nzXs="24" nzMd="12" nzXl="6">
+            <div class="gutter-box">
+                <h1>
+                    <nz-spin nzSimple></nz-spin>
+                </h1>
+                视频
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要展示模块 -->
+    <div bottom nz-row [nzGutter]="{ xs: 8, sm: 16, md: 16, lg: 16, xl: 16, xxl: 16 }">
+        <!-- 第一列 -->
+        <div nz-col class="gutter-row" nzSm="24" nzMd="12" nzXl="6">
+            <div class="gutter-box">
+                <nz-card [nzBordered]="false" nzTitle="Card title" [nzExtra]="extraTemplate">
+                    <p>Card content</p>
+                    <p>Card content</p>
+                    <p>Card content</p>
+                </nz-card>
+
+            </div>
+
+            <div class="gutter-box">
+                <nz-card [nzBordered]="false" nzTitle="Card title" [nzExtra]="extraTemplate">
+                    <nz-card-tab>
+                        <nz-tabset nzSize="large" [(nzSelectedIndex)]="index1">
+                            <nz-tab nzTitle="tab1"></nz-tab>
+                            <nz-tab nzTitle="tab2"></nz-tab>
+                        </nz-tabset>
+                    </nz-card-tab>
+                    content{{ index1 }}
+                </nz-card>
+            </div>
+        </div>
+
+        <!-- 第二列 -->
+        <div nz-col class="gutter-row" nzSm="24" nzMd="12" nzXl="6">
+            <div class="gutter-box">
+                <nz-card [nzBordered]="false" nzTitle="Card title" [nzExtra]="extraTemplate">
+                    <p>Card content</p>
+                    <p>Card content</p>
+                    <p>Card content</p>
+                </nz-card>
+            </div>
+            <div class="gutter-box">
+                <nz-card [nzCover]="coverTemplate1"
+                    [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
+                    <nz-card-meta nzTitle="Card title" nzDescription="This is the description"
+                        [nzAvatar]="avatarTemplate"></nz-card-meta>
+                </nz-card>
+            </div>
+        </div>
+
+        <!-- 第三列 -->
+        <div nz-col class="gutter-row" nzSm="24" nzMd="12" nzXl="6">
+            <div class="gutter-box">
+                <nz-card nzHoverable [nzCover]="coverTemplate">
+                    <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+                </nz-card>
+            </div>
+        </div>
+
+        <!-- 第四列 -->
+        <div nz-col class="gutter-row" nzSm="24" nzMd="12" nzXl="6">
+            <div class="gutter-box">
+                <nz-card nzHoverable [nzCover]="coverTemplate">
+                    <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+                </nz-card>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<ng-template #extraTemplate>
+    <a>More</a>
+</ng-template>
+<ng-template #coverTemplate>
+    <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+</ng-template>
+<ng-template #avatarTemplate>
+    <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+</ng-template>
+<ng-template #coverTemplate1>
+        <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
+    </ng-template>
+<ng-template #actionSetting>
+    <i nz-icon type="setting"></i>
+</ng-template>
+<ng-template #actionEdit>
+    <i nz-icon type="edit"></i>
+</ng-template>
+<ng-template #actionEllipsis>
+    <i nz-icon type="ellipsis"></i>
+</ng-template>

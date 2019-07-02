@@ -1,0 +1,40 @@
+$yellow: rgba(255, 191, 0, 0.3);
+$green: rgba(0, 162, 174, 0.3);
+$orange: rgba(245, 106, 0, 0.3);
+$purple: rgba(114, 101, 230, 0.3);
+
+$colorList: $yellow $green $orange $purple;
+
+.gutter-box {
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+div[top] {
+  @for $i from 1 to length($colorList) + 1 {
+    :nth-child(#{$i}) > .gutter-box {
+      background-color: nth($colorList, $i);
+    }
+  }
+
+  .gutter-box {
+    text-align: center;
+    transition: opacity 0.5s;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .gutter-box:hover {
+    opacity: 0.8;
+  }
+
+  > * {
+    margin-bottom: 16px;
+  }
+}
+
+div[bottom] {
+  .gutter-box {
+    margin-bottom: 16px;
+  }
+}
